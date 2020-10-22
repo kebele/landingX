@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>landing x</title>
+  </head>
+  <body>
+    <!-- thanks to 
+         Online Tutorials
+        https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog
+    -->
+    <header>
+      <a href="#" class="logo">
+        <img src="assets/logo.png" alt="" />
+      </a>
+      <div class="toggle">
+        <img src="assets/toggle.png" alt="" />
+      </div>
+    </header>
+
+    <div class="banner">
+      <div class="content">
+        <h2>put on a <span>happy</span> face</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi
+          consequuntur esse eius sed! Ipsa magnam delectus natus earum sapiente
+          dolores numquam laboriosam excepturi? Nemo facere sunt facilis? Unde,
+          odio sit!
+        </p>
+        <a href="#" class="play" onclick="toggle()">
+          <img src="assets/play.png" alt="" />watch trailer
+        </a>
+        <div class="slide"></div>
+        <ul class="sci">
+          <li>
+            <a href="#"><img src="assets/facebook.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/twitter.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="assets/instagram.png" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="trailer">
+        <video src="assets/trailer.mp4" controls="true"></video>
+        <img src="assets/close.png" alt="" class="close" onclick="toggle()">
+    </div>
+
+    <script>
+        function toggle(){
+            let trailer = document.querySelector(".trailer");
+            let video = document.querySelector("video");
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause()
+        }
+    </script>
+  </body>
+</html>
